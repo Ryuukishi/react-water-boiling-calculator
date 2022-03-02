@@ -28,7 +28,7 @@ const Calculator = () => {
 
   const handleCelsiusChange = (event) => {
     console.log(event.target.value);
-    if (event.target.value === "") {
+    if (!event.target.value || !event.target.value.trim()) {
       setFahrenheit("");
       setCelsius("");
     } else if (!isNaN(event.target.value)) {
@@ -38,7 +38,7 @@ const Calculator = () => {
   };
 
   const handleFahrenheitChange = (event) => {
-    if (event.target.value === "") {
+    if (!event.target.value || !event.target.value.trim()) {
       setFahrenheit("");
       setCelsius("");
     } else if (!isNaN(event.target.value)) {
